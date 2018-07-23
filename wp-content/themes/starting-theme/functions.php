@@ -44,7 +44,9 @@ function starting_theme_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'starting-theme' ),
+		'main-menu' => esc_html__( 'Primary', 'starting-theme' ),
+		'footer-menu-1' => esc_html__( 'Footer 1', 'starting-theme' ),
+		'footer-menu-2' => esc_html__( 'Footer 2', 'starting-theme' ),
 	) );
 
 	/*
@@ -98,6 +100,24 @@ function starting_theme_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Area 1',
+		'id'            => 'footer_area_1',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+	) );
+
+	register_sidebar( array(
+		'name'          => 'Footer Area 2',
+		'id'            => 'footer_area_2',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+	) );
 }
 add_action( 'widgets_init', 'starting_theme_widgets_init' );
 
@@ -148,20 +168,20 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 //add data-toggle class and dropdown-toggle to parent anchor link
-function addanchorlink_class($menu) {
-    $menu = preg_replace('/ href="#"/','/ href="#" class="dropdown-toggle" data-toggle="dropdown" /',$menu);
-    return $menu;
-}
-
-add_filter('wp_nav_menu','addanchorlink_class');
-
-//replace child ul class
-function new_submenu_class($menu) {
-    $menu = preg_replace('/ class="sub-menu"/','/ class="dropdown-menu" /',$menu);
-    return $menu;
-}
-
-add_filter('wp_nav_menu','new_submenu_class');
+// function addanchorlink_class($menu) {
+//     $menu = preg_replace('/ href="#"/','/ href="#" class="dropdown-toggle" data-toggle="dropdown" /',$menu);
+//     return $menu;
+// }
+//
+// add_filter('wp_nav_menu','addanchorlink_class');
+//
+// //replace child ul class
+// function new_submenu_class($menu) {
+//     $menu = preg_replace('/ class="sub-menu"/','/ class="dropdown-menu" /',$menu);
+//     return $menu;
+// }
+//
+// add_filter('wp_nav_menu','new_submenu_class');
 
 // Make the search to index custom
 /**
