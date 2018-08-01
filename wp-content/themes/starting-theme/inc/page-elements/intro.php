@@ -1,13 +1,25 @@
+<?php
+
+$intro_main_copy = get_field('intro_main_copy');
+$intro_sub_paragraph = get_field('intro_sub_paragraph');
+
+ ?>
+
+
 <div class="container-fluid intro">
   <div class="row">
-    <div class="col-md-6">
-      <h1><?php echo the_title(); ?></h1>
-    </div>
-    <div class="col-md-6 breadcrumbs">
+    <div class="col-md-6 main">
+
       <?php
-        if ( function_exists('yoast_breadcrumb') ) {
-          yoast_breadcrumb( '</p><p id="breadcrumbs">','</p><p>' );
-        }
+        echo $intro_main_copy;
+      ?>
+
+    </div>
+    <div class="col-md-6 sub">
+      <?php
+
+        echo $intro_sub_paragraph;
+
       ?>
     </div>
   </div><!-- /.row -->

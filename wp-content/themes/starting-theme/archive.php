@@ -9,43 +9,40 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<?php
 
-		<?php
-		if ( have_posts() ) : ?>
+include(locate_template("inc/page-elements/title.php"));
 
-			<header class="page-header">
-				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
-
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+?>
 
 <?php
-get_sidebar();
+
+// the query
+
+$args = array( 'post_type' => 'post', 'cat' => get_query_var('cat')  );
+$the_query = new WP_Query( $args );
+
+ ?>
+
+<?php if ( $the_query->have_posts() ) : ?>
+
+	<div class="container-fluid">
+		<div class="row">
+			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+			<div class="col-md-6">
+				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+
+				<?php the_content(); ?>
+			</div>
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+		</div>
+	</div>
+
+<?php else : ?>
+<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>
+
+<?php
+//get_sidebar();
 get_footer();

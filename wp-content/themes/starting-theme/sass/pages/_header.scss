@@ -85,15 +85,20 @@ span.open {
         left: 33%;
         display: none;
         transition: 0.5s;
+        height: 100%;
+        width: 33%;
+        border-right: 1px solid #0182C8;
+        border-left: 1px solid #0182C8
       }
       a {
-        @include xs {
-          font-size: 20px;
-        }
+        font-size: 20px;
         @include md {
           font-size: 40px;
         }
       }
+    }
+    ul ul:hover {
+      display: block
     }
     ul li ul {
       transition: 0.5s;

@@ -2,10 +2,10 @@
   background: url(images/map.jpg) no-repeat;
   background-size: cover;
   @include xs {
-    padding-top: 350px;
+    padding-top: 0;
   }
   @include md {
-    padding-top: 700px;
+    padding-top: 50vh;
   }
   .contact {
     padding: 50px;

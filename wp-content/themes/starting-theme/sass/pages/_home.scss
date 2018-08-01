@@ -3,6 +3,12 @@
     padding-left:0;
 }
 
+.bxslider {
+  .bx-wrapper {
+    height: 100vh;
+  }
+}
+
 .slide {
   h1 {
     color: #fff;
@@ -20,7 +26,7 @@
   .vert-align {
     position: absolute;
     top: 50%;
-    width: 100%;
+    width: calc(100% - 30px);
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -88,7 +94,7 @@
       color: #fff;
     }
   }
-  .wrapper {
+  .wrapper-even {
     transform: rotate(-45deg);
     overflow: hidden;
     height: 110%;
@@ -101,13 +107,36 @@
         height: 110%;
         width: 200%;
       }
+      .inner {
+        position: absolute;
+        transform: rotate(45deg);
+        height: 100%;
+        width: 100%;
+      }
   }
-  .inner {
-    position: absolute;
+  .wrapper-odd {
     transform: rotate(45deg);
-    height: 100%;
-    width: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 110%;
+    width: 350%;
+      @include md {
+      height: 110%;
+      width: 300%;
+      }
+      @include lg {
+        height: 110%;
+        width: 200%;
+      }
+      .inner {
+        position: absolute;
+        transform: rotate(-45deg);
+        height: 100%;
+        width: 100%;
+      }
   }
+
   .vert-align {
     position: absolute;
     top: 50%;
@@ -122,5 +151,6 @@
     line-height: 160px;
     color: rgba(255, 255, 255, .13);
     font-weight: $font__bold;
+    text-transform: uppercase;
   }
 }

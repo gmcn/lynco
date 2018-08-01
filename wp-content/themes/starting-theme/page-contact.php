@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+ * Template Name: Contact Page
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -15,7 +15,7 @@
 get_header(); ?>
 
 <?php
-include(locate_template("inc/page-elements/intro.php"));
+include(locate_template("inc/page-elements/title.php"));
 include(locate_template("inc/page-contact/content.php"));
 ?>
 

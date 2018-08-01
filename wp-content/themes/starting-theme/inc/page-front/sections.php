@@ -3,7 +3,7 @@
 
   	<div class="row no-gutter">
 
-    	<?php while( have_rows('section') ): the_row();
+    	<?php $i = 0; while( have_rows('section') ): the_row();
 
     		// vars
     		$section_title = get_sub_field('section_title');
@@ -25,7 +25,7 @@
             <?php echo $section_title ?>
           </div>
 
-          <div class="wrapper">
+          <div class="wrapper-<?php if ($i == 0 || $i == 1 || $i == 4 || $i == 5 || $i == 8 || $i == 9) : ?>even<?php else : ?>odd<?php endif; ?>">
             <div class="inner" style="background: url(<?php echo $section_image ?>) no-repeat bottom left;">
             </div>
 
@@ -33,7 +33,7 @@
 
     		</div>
 
-    	<?php endwhile; ?>
+    	<?php $i++; endwhile; ?>
 
     </div>
 

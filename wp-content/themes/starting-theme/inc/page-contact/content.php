@@ -59,7 +59,8 @@ $acf_pr_email_addr= get_field( 'acf_pr_email_addr' );
 
     <div class="col-md-3 wow fadeInRight">
       <?php if($acf_main_tel_no != ""):  ?>
-      <span>Telephone:</span><br  /><?php echo $acf_main_tel_no ?><br  />
+        <a href="tel:<?php echo $acf_main_tel_no ?>">
+      <span>Telephone:</span><br  /><?php echo $acf_main_tel_no ?></a><br  />
       <?php endif; ?>
 
       <?php if($acf_pr_email_addr != ""):  ?>

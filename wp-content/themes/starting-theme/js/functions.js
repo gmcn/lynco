@@ -4,12 +4,17 @@
     controls: false,
   });
 
+  $('.servicegallery').bxSlider({
+    pagerCustom: '#bx-pager',
+  });
+
   /**
    * Match Height (Including Safari onload fix)
    */
   function startMatchHeight() {
     $('.matchheight').matchHeight();
     $('.featureheight').matchHeight();
+    $('.servicesheight').matchHeight();
   }
   window.onload = startMatchHeight;
 
