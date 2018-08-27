@@ -34,15 +34,15 @@ class Ai1wmue_Main_Controller {
 		register_activation_hook( AI1WMUE_PLUGIN_BASENAME, array( $this, 'activation_hook' ) );
 
 		// Activate hooks
-		$this->activate_actions()
-			->activate_filters()
-			->activate_textdomain();
+		$this->activate_actions();
+		$this->activate_filters();
+		$this->activate_textdomain();
 	}
 
 	/**
 	 * Activation hook callback
 	 *
-	 * @return Object Instance of this class
+	 * @return void
 	 */
 	public function activation_hook() {
 
@@ -51,18 +51,16 @@ class Ai1wmue_Main_Controller {
 	/**
 	 * Initializes language domain for the plugin
 	 *
-	 * @return Object Instance of this class
+	 * @return void
 	 */
 	private function activate_textdomain() {
 		load_plugin_textdomain( AI1WMUE_PLUGIN_NAME, false, false );
-
-		return $this;
 	}
 
 	/**
 	 * Register listeners for actions
 	 *
-	 * @return Object Instance of this class
+	 * @return void
 	 */
 	private function activate_actions() {
 		// Init
@@ -70,22 +68,18 @@ class Ai1wmue_Main_Controller {
 
 		// All in One WP Migration
 		add_action( 'plugins_loaded', array( $this, 'ai1wm_loaded' ), 20 );
-
-		return $this;
 	}
 
 	/**
 	 * Register listeners for filters
 	 *
-	 * @return Object Instance of this class
+	 * @return void
 	 */
 	private function activate_filters() {
 		add_filter( 'ai1wm_max_file_size', array( $this, 'max_file_size' ) );
 
 		// Add links to plugin list page
 		add_filter( 'plugin_row_meta', array( $this, 'plugin_row_meta' ), 5, 2 );
-
-		return $this;
 	}
 
 	/**
@@ -140,7 +134,7 @@ class Ai1wmue_Main_Controller {
 	/**
 	 * Max file size callback
 	 *
-	 * @return string
+	 * @return integer
 	 */
 	public function max_file_size() {
 		return AI1WMUE_MAX_FILE_SIZE;
