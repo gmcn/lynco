@@ -304,6 +304,25 @@ function projects_taxonomies() {
     );
     register_taxonomy( 'projects_category', array( 'projects' ), $product_cat_args );
 
+		// Product Type Taxonomy
+    $product_type_labels = array(
+        'name'          => 'Project Type',
+        'singular_name' => 'Project Type',
+        'menu_name'     => 'Project Types'
+    );
+
+    $product_type_args = array(
+        'labels'                     => $product_type_labels,
+        'hierarchical'               => true,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => true,
+        'rewrite'                    => array('pages' => true)
+    );
+    register_taxonomy( 'projects_type', array( 'projects' ), $product_type_args );
+
 }
 
 // Move Yoast to bottom

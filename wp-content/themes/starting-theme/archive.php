@@ -12,36 +12,54 @@ get_header(); ?>
 <?php
 
 include(locate_template("inc/page-elements/title.php"));
+include(locate_template("inc/page-news/filter.php"));
 
 ?>
 
-<?php
+  <?php
+  if ( have_posts() ) : ?>
 
-// the query
+  <div class="container-fluid news">
+    <div class="row">
 
-$args = array( 'post_type' => 'post', 'cat' => get_query_var('cat')  );
-$the_query = new WP_Query( $args );
+    <?php
+    /* Start the Loop */
+    while ( have_posts() ) : the_post();
+    $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'large' );
+    ?>
 
- ?>
 
-<?php if ( $the_query->have_posts() ) : ?>
 
-	<div class="container-fluid">
-		<div class="row">
-			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-			<div class="col-md-6">
-				<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        <div class="col-md-6 newsitem">
+          <div class="row">
+            <div class="col-md-6 newscopy matchheight">
+              <h2><?php the_title(); ?></h2>
+              <?php the_content(); ?>
+              <a href="<?php the_permalink(); ?>">View More</a>
+              <div class="date">
+                <?php echo the_date(); ?>
+              </div>
+            </div>
+            <div class="col-md-6 matchheight" style="padding: 0;">
+              <img src="<?php echo $thumb[0] ?>" alt="<?php the_title(); ?>">
+            </div>
+          </div>
+        </div>
 
-				<?php the_content(); ?>
-			</div>
-			<?php endwhile; ?>
-			<?php wp_reset_postdata(); ?>
-		</div>
-	</div>
+    <?php endwhile;
 
-<?php else : ?>
-<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
-<?php endif; ?>
+    the_posts_navigation();
+
+  else :
+
+    get_template_part( 'template-parts/content', 'none' );
+
+  endif; ?>
+
+
+
+  </div>
+</div>
 
 <?php
 //get_sidebar();
