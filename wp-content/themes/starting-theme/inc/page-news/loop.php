@@ -31,7 +31,7 @@ $the_query = new WP_Query( $args ); ?>
             <?php the_content(); ?>
             <a href="<?php the_permalink(); ?>">View More</a>
             <div class="date">
-              <?php echo the_date(); ?>
+              <?php echo the_date('j.m.y') ?>
             </div>
           </div>
           <div class="col-md-6 matchheight" style="padding: 0;">

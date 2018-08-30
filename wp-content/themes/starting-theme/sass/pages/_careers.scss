@@ -1,0 +1,116 @@
+.careers {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  .career {
+    margin-bottom: 15px;
+    hr {
+      border-top: 2px solid #5C214B;
+      width: calc(100% - 30px);
+    }
+    &__header {
+      background: #5C214B;
+      color: #fff;
+      padding: 20px;
+      margin-bottom: 15px;
+      h2 {
+        margin: 0;
+        font-weight: $font__bold;
+      }
+      span {
+        font-size: 25px;
+        font-weight: $font__light;
+      }
+    }
+    &__copy {
+      padding-bottom: 50px;
+    }
+    &__intro {
+      color: rgba(18,50,67,.6);
+      font-size: 16px;
+      font-weight: $font__bold;
+      a {
+        color: #fff;
+      }
+      ul {
+        margin: 0;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: 0;
+        list-style: none;
+        li {
+          float: left;
+          padding: 12.5px 20px;
+          background-color: #5C214B;
+          border-right: 2px solid #fff;
+          transition: .5s;
+        }
+        li:hover {
+          background-color: #98226B;
+        }
+      }
+    }
+  }
+}
+
+.apply {
+  background: #5C214B;
+  color: #fff;
+  padding: 30px 0;
+  font-size: 17px;
+  font-weight: $font__bold;
+  h3 {
+    font-size: 36px;
+    font-weight: $font__light;
+    line-height: 40px;
+    margin-bottom: 25px;
+  }
+  .form-control {
+    margin-bottom: 19px;
+  }
+  .wpcf7-submit {
+    border-radius: 0;
+    padding: 15px 50px;
+    background: #fff;
+    color: #5C214B;
+    font-size: 15px;
+    margin-top: 25px;
+    border: 1px solid #fff;
+    transition: .5s;
+  }
+  .wpcf7-submit:hover {
+    border-radius: 0;
+    padding: 15px 50px;
+    background: #5C214B;
+    color: #fff;
+    border: 1px solid #fff;
+  }
+  p:first-of-type {
+    font-weight: $font__light;
+    font-size: 13px;
+    color: rgba(225,225,255,.5);
+    text-transform: uppercase;
+  }
+  a {
+    color: #fff;
+    transition: .5s;
+  }
+  a:hover {
+    color: #98226B;
+    text-decoration: none;
+  }
+  a.download-app {
+    background: #98226B;
+    padding: 15px 20px;
+    color: #fff;
+    display: inline-block;
+    transition: .5s;
+    font-weight: $font__light;
+    margin: 25px 0;
+  }
+  a.download-app:hover {
+    background: #fff;
+    color: #98226B;
+    text-decoration: none;
+  }
+}

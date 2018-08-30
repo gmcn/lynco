@@ -5,7 +5,9 @@ $current = get_query_var('cat');
   <div class="row">
     <div class="col-md-6">
       <h1>
-        <?php if( is_page() ): ?>
+        <?php if($post->post_parent == 168) : ?>
+          Careers
+        <?php elseif( is_page() ): ?>
           <?php echo the_title(); ?>
         <?php else : ?>
           <?php
