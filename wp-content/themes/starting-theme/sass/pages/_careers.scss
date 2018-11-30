@@ -3,6 +3,12 @@
   margin-bottom: 15px;
   .career {
     margin-bottom: 15px;
+    .dates {
+      text-align: right;
+      color: rgba(255,255,255,.5);
+      font-size: 14px;
+      font-weight: $font__bold;
+    }
     hr {
       border-top: 2px solid #5C214B;
       width: calc(100% - 30px);

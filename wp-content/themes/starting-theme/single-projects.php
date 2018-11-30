@@ -12,7 +12,7 @@ get_header(); ?>
 <?php
 
 include(locate_template("inc/page-elements/title.php"));
-include(locate_template("inc/page-news/content.php"));
+include(locate_template("inc/page-projects/content.php"));
 
 ?>
 

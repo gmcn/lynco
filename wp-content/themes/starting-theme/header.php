@@ -37,7 +37,7 @@
 						<img class="branding" width="200px" src="<?php echo get_template_directory_uri(); ?>/images/lynco-logo.svg" alt="<?php bloginfo( 'name' ); ?> | <?php echo $description; ?>"  />
 					</a>
 				</div>
-				<div class="col-xs-6 hamburger wow fadeInRight">
+				<div class="col-xs-6 hamburger">
 					<!-- Use any element to open/show the overlay navigation menu -->
 					<span class="open" onclick="openNav()"><img src="<?php echo get_template_directory_uri(); ?>/images/hamburger-menu.png" /></span>
 				</div>

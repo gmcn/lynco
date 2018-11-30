@@ -1,0 +1,256 @@
+.projects-filter {
+  background: #0182C8;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-bottom: 5px;
+  h4 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 25px;
+    span {
+      font-weight: 300;
+      font-size: 14px;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    float: left;
+    margin-right: 25px;
+    p {
+      color: rgba(255,255,255,.65);
+      text-transform: uppercase;
+      transition: .5s;
+      margin-top: 10px;
+    }
+  }
+  li:hover {
+    p {
+      color: rgba(255,255,255,1)
+    }
+  }
+
+}
+
+.projects {
+  margin-bottom: 5px;
+  &__loop {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    .image_wrapper {
+      height: 300px;
+      position: relative;
+      background-size: cover !important;
+      .category_box {
+        height: 66px;
+        width: 66px;
+        position: absolute;
+        left: 40px;
+        top: 0;
+        &.Commercial {
+          background: #90A9B7
+        }
+        &.Leisure {
+          background: #87C9EA;
+        }
+        &.Industrial {
+          background: #70D4D8;
+        }
+        &.Education {
+          background: #B2BCD5;
+        }
+        &.Healthcare {
+          background: #E6A7C2;
+        }
+      }
+    }
+    .content_wrapper {
+      padding-left: 40px;
+      padding-right: 40px;
+      background: #F7F7F7;
+      margin-bottom: 5px;
+      .info {
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: rgba(83, 104, 116, .5);
+        p {
+          font-size: 16px;
+        }
+        .Commercial {
+          color: #90A9B7
+        }
+        .Leisure {
+          color: #87C9EA;
+        }
+        .Industrial {
+          color: #70D4D8;
+        }
+        .Education {
+          color: #B2BCD5;
+        }
+        .Healthcare {
+          color: #E6A7C2;
+        }
+      }
+    }
+    h3 {
+      font-size: 25px;
+      font-weight: 700;
+      margin-top: 0;
+      padding-top: 25px;
+      a {
+        color: #536874;
+      }
+    }
+  }
+  &__info_col {
+    padding-left: 2px !important;
+    padding-right: 2px !important;
+    a.more {
+      padding: 10px 15px;
+      background: #19AEFF;
+      display: inline-block;
+      color: #fff;
+      transition: .5s;
+    }
+    a.more:hover {
+      background: #123243;
+      text-decoration: none;
+    }
+  }
+  &__title_col {
+    position: relative;
+    background: #19AEFF;
+    h2 {
+      -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+      -o-transform: rotate(270deg);
+      -ms-transform: rotate(270deg);
+      transform: rotate(270deg);
+      text-align: center;
+      font-size: 25px;
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.5);
+      font-weight: 700;
+    }
+
+    .vert-align {
+      position: absolute;
+      top: 50%;
+      width: calc(100% - 30px);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.single-projects {
+  h3 {
+    font-size: 45px;
+    color: #1D2C3C;
+    font-weight: 700;
+    margin-bottom: 50px;
+  }
+  .info {
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: rgba(83, 104, 116, .5);
+      p {
+        font-size: 16px;
+      }
+      p.Commercial {
+        color: #90A9B7
+      }
+      p.Leisure {
+        color: #87C9EA;
+      }
+      p.Industrial {
+        color: #70D4D8;
+      }
+      p.Education {
+        color: #B2BCD5;
+      }
+      p.Healthcare {
+        color: #E6A7C2;
+      }
+    }
+    .content {
+      background: #fff;
+      p, ul, li {
+        color: rgba(18, 50, 67, .6);
+      }
+      .back_wrapper {
+        display: block;
+        a.back {
+          padding: 10px 15px;
+          background: #1D2C3C;
+          display: inline-block;
+          color: #fff;
+          transition: .5s;
+          text-transform: uppercase;
+          margin-top: 25px;
+          margin-left: 25px;
+        }
+        a.back:hover {
+          background: #19AEFF;
+          text-decoration: none;
+        }
+
+      }
+      .back_wrapper:after {
+        background: pink;
+        height: 100px;
+        width: 100px;
+      }
+    }
+    .projects__title_col.Commercial {
+      background: #90A9B7;
+    }
+    .projects__title_col.Leisure {
+      background: #87C9EA;
+    }
+    .projects__title_col.Industrial {
+      background: #70D4D8;
+    }
+    .projects__title_col.Education {
+      background: #B2BCD5;
+    }
+    .projects__title_col.Healthcare {
+      background: #E6A7C2;
+    }
+    .gallery {
+      padding-right: 5px;
+      padding-left: 5px;
+    }
+    .servicegallery {
+      margin: 0;
+      .slide {
+        height: 80vh;
+      }
+    }
+    .bx-wrapper .bx-prev {
+    left: 10px;
+    background: url(images/left-arrow_white.png) no-repeat 0 0;
+    }
+    .bx-wrapper .bx-next {
+    right: 10px;
+    background: url(images/right-arrow_white.png) no-repeat 0 0;
+  }
+    #bx-pager {
+      margin-top: 5px;
+      background: #0D2B3B;
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+}

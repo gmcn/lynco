@@ -9,6 +9,11 @@
     font-weight: $font__medium;
   }
   .breadcrumbs {
+    .updatedate {
+      font-size: 40px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, .2);
+    }
     text-align: left;
     @include md {
       text-align: right;

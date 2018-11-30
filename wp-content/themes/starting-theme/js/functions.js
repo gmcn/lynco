@@ -15,6 +15,8 @@
     $('.matchheight').matchHeight();
     $('.featureheight').matchHeight();
     $('.servicesheight').matchHeight();
+    $('.projectheight').matchHeight();
+    $('.content_wrapper').matchHeight();
   }
   window.onload = startMatchHeight;
 

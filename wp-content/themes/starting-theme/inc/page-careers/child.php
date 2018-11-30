@@ -6,6 +6,7 @@ $intro_sub_paragraph = get_field('intro_sub_paragraph');
 $salary = get_field('salary');
 $closing_date = get_field('closing_date');
 $application_form = get_field('application_form');
+$post_date = get_the_date( 'j.m.Y' );
 
  ?>
 
@@ -15,8 +16,16 @@ $application_form = get_field('application_form');
     <div class="col-md-12 career wow fadeInLeft">
 
       <div class="career__header">
-        <h2><?php the_title(); ?></h2>
-        <span><?php echo $salary ?></span>
+        <div class="row">
+          <div class="col-md-6">
+            <h2><?php the_title(); ?></h2>
+            <span><?php echo $salary ?></span>
+          </div>
+          <div class="col-md-6 dates">
+            Job Posted: <?php echo $post_date; ?><br />
+            Closing Date: <?php echo $closing_date; ?>
+          </div>
+        </div>
       </div>
 
       <div class="row">
