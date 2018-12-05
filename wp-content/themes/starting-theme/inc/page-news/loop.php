@@ -38,6 +38,7 @@ $the_query = new WP_Query( $args ); ?>
             <img src="<?php echo $thumb[0] ?>" alt="<?php the_title(); ?>">
           </div>
         </div>
+        <hr>gary
       </div>
 
   	<?php endwhile; ?>

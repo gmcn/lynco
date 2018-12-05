@@ -17,6 +17,7 @@
 
 					// ACF Sub fields
       		$slide_image = get_sub_field('slide_image');
+					$slide_slanted = get_sub_field('slide_slanted');
       		$slide_title = get_sub_field('slide_title');
       		$slide_title_colour = get_sub_field('slide_title_colour');
           $slide_project_title = get_sub_field('project_title');
@@ -27,7 +28,7 @@
 
           <div style="width: 100%; height: 100%; background: rgba(0,0,0,.5);">
 
-            <div class="container-fluid">
+            <div class="container-fluid" style="background: url('<?php echo $slide_slanted; ?>') center center no-repeat;">
 
               <div class="slide__title vert-align">
                 <h1 style="background: <?php echo $slide_title_colour ?>"><?php echo $slide_title; ?></h1>

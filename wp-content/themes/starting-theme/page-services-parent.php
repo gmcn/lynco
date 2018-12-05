@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages
+ * Template Name: Services Parent Page
  *
  * This is the template that displays all pages by default.
  * Please note that this is the WordPress construct of pages
@@ -17,8 +17,9 @@ get_header(); ?>
 <?php
 include(locate_template("inc/page-elements/title.php"));
 include(locate_template("inc/page-elements/intro.php"));
-include(locate_template("inc/page-careers/loop.php"));
+include(locate_template("inc/page-front/sections.php"));
 ?>
+
 
 <?php
 //get_sidebar();

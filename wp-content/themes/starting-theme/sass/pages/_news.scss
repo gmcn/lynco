@@ -2,10 +2,16 @@
   .newsitem {
     margin-top: 15px;
     margin-bottom: 15px;
-    border-bottom: 2px solid #B59B07;
+    // border-bottom: 2px solid #B59B07;
     position: relative;
     .newscopy {
       height: 100%;
+    }
+    hr {
+      border-bottom: 1px solid #B59B07;
+      margin: 0;
+      width: calc(100% + 15px);
+      border-top: 1px solid #B59B07;
     }
   }
   h2 {
@@ -24,10 +30,13 @@
     background: #B59B07;
     color: #fff;
     padding: 10px 20px;
-    position: absolute;
-    bottom: 0;
+    @include md {
+      position: absolute;
+      bottom: 0;
+    }
     transition: .5s;
     text-transform: uppercase;
+    display: inline-block;
   }
   a:hover {
     background: #132c3b;
@@ -35,9 +44,11 @@
     color: #fff;
   }
   .date {
-    bottom: 10px;
-    right: 10px;
-    position: absolute;
+    @include md {
+      bottom: 10px;
+      left: 160px;
+      position: absolute;
+    }
     color: rgba(83,104,116,.5);
     font-size: 12px;
   }
@@ -45,7 +56,9 @@
 
 .newsfilter {
   background: #B59B07;
-  padding: 50px 15px;
+  @include md {
+    padding: 50px;
+  }
   p {
     color: rgba(255,255,255,.5);
     font-size: 13px;
@@ -54,7 +67,10 @@
   }
   select {
     background: none;
+    -webkit-appearance:none;
+    background: url(images/select_arrows.png) 100% 50% no-repeat;
     border: none;
+    width: 125px;
     color: #fff;
     text-transform: uppercase;
   }

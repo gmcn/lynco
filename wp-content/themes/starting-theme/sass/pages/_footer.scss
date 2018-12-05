@@ -73,6 +73,10 @@ footer {
   background: url(images/footer-bg.jpg) repeat-x #F4F4F4;
   padding-top: 280px;
   color: #1D2C3C;
+  @include md {
+    padding-left: 50px !important;
+    padding-right: 50px !important;
+  }
   .footer__logo {
     text-align: center;
     img {

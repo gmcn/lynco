@@ -31,7 +31,7 @@ $parent_slug = $post_data->post_name;
        ?>
 
        <a href="/sevices/<?php echo $parent_slug; ?>" >Back to <?php echo get_the_title( $post->post_parent ); ?></a>
-       <a class="view-projects" href="/<?php echo $parent_slug; ?>" >View Case Studies</a>
+       <a class="view-projects" href="/projects_type/case-studies/" >View Case Studies</a>
 
     </div>
     <div class="col-md-6 col-md-offset-2 gallery">

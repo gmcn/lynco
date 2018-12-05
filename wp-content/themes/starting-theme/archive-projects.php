@@ -13,7 +13,7 @@ get_header(); ?>
 
 include(locate_template("inc/page-elements/title.php"));
 include(locate_template("inc/page-projects/filter.php"));
-include(locate_template("inc/page-projects/loop.php"));
+include(locate_template("inc/page-projects/archive-loop.php"));
 
 ?>
 

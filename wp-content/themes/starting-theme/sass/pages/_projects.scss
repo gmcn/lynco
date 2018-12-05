@@ -1,5 +1,8 @@
 .projects-filter {
   background: #0182C8;
+  @include md {
+    background: url(images/filter-line.svg) #0182C8 30% 50% repeat-y;
+  }
   padding-top: 50px;
   padding-bottom: 50px;
   margin-bottom: 5px;
@@ -38,7 +41,10 @@
 
 .projects {
   margin-bottom: 5px;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
   &__loop {
+    background: #19AEFF;
     padding-left: 2px !important;
     padding-right: 2px !important;
     .image_wrapper {
@@ -111,6 +117,7 @@
   &__info_col {
     padding-left: 2px !important;
     padding-right: 2px !important;
+    background: #fff;
     a.more {
       padding: 10px 15px;
       background: #19AEFF;
@@ -154,8 +161,28 @@
   }
 }
 
-.single-projects {
+.case-studies {
+  .projects__loop {
+    background: #75278B;
+  }
+  .projects__title_col {
+    background: #75278B;
+  }
+}
+
+.single-project {
+  padding-left: 15px !important;
+  padding-right: 15px !important;
   h3 {
+    @include sm {
+      font-size: 25px;
+    }
+    @include md {
+      font-size: 35px;
+    }
+    @include lg {
+      font-size: 45px;
+    }
     font-size: 45px;
     color: #1D2C3C;
     font-weight: 700;
@@ -190,24 +217,7 @@
       p, ul, li {
         color: rgba(18, 50, 67, .6);
       }
-      .back_wrapper {
-        display: block;
-        a.back {
-          padding: 10px 15px;
-          background: #1D2C3C;
-          display: inline-block;
-          color: #fff;
-          transition: .5s;
-          text-transform: uppercase;
-          margin-top: 25px;
-          margin-left: 25px;
-        }
-        a.back:hover {
-          background: #19AEFF;
-          text-decoration: none;
-        }
 
-      }
       .back_wrapper:after {
         background: pink;
         height: 100px;
@@ -236,8 +246,41 @@
     .servicegallery {
       margin: 0;
       .slide {
-        height: 80vh;
+        height: 100%;
+        min-height: 500px;
       }
+    }
+    .bx-wrapper {
+      height: calc(100% - 120px);
+    }
+    .servicegallery, .bx-viewport {
+      height: 100% !important;
+      min-height: 500px;
+    }
+    #bx-pager {
+      height: 115px;
+    }
+    #bx-pager img {
+      height: 80px !important;
+    }
+    .back_wrapper {
+      display: block;
+      margin: 50px 0;
+      a.back {
+        padding: 10px 15px;
+        background: #1D2C3C;
+        display: inline-block;
+        color: #fff;
+        transition: .5s;
+        text-transform: uppercase;
+        margin-top: 25px;
+        margin-left: 25px;
+      }
+      a.back:hover {
+        background: #19AEFF;
+        text-decoration: none;
+      }
+
     }
     .bx-wrapper .bx-prev {
     left: 10px;
@@ -252,5 +295,13 @@
       background: #0D2B3B;
       padding-top: 25px;
       padding-bottom: 25px;
+    }
+
+    .additional-info {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      ul {
+        margin: 0;
+      }
     }
 }

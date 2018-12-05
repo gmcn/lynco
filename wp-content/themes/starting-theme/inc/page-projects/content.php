@@ -9,13 +9,16 @@ $project_main_contractor = get_field('project_main_contractor');
 $project_timeframe = get_field('project_timeframe');
 $products_used = get_field('products_used');
 
+$column_left = get_field('column_left');
+$column_right = get_field('column_right');
+
 $term_obj_list = get_the_terms( $post->ID, 'projects_category' );
 $terms_string = join(', ', wp_list_pluck($term_obj_list, 'name'));
 
 ?>
 
 
-<div class="container-fluid single-projects">
+<div class="container-fluid single-project <?php if(pa_in_taxonomy('projects_type','case-studies' )) : ?>case-studies<?php endif ?>">
   <div class="row">
     <div class="col-sm-1 hidden-xs projects__title_col matchheight">
       <div class="vert-align">
@@ -77,9 +80,13 @@ $terms_string = join(', ', wp_list_pluck($term_obj_list, 'name'));
 
       <div class="content">
         <?php the_content(); ?>
-        <div class="back_wrapper">
-          <a class="back" href="/projects">Back to Project</a>
-        </div>
+
+        <?php if (!$column_left || !$column_right): ?>
+          <div class="back_wrapper">
+            <a class="back" href="/projects">Back to Projects</a>
+          </div>
+        <?php endif; ?>
+
       </div>
 
     </div><!-- /.col-sm-4 -->
@@ -118,5 +125,25 @@ $terms_string = join(', ', wp_list_pluck($term_obj_list, 'name'));
           </div>
         <?php endif; ?>
     </div><!-- /.col-sm-4 -->
-  </div>
-</div>
+  </div><!-- /.row -->
+
+  <?php if ($column_left || $column_right): ?>
+
+  <div class="row additional-info">
+    <div class="col-sm-3 col-md-offset-1">
+      <?php echo $column_left ?>
+    </div>
+    <div class="col-sm-9 col-md-7 col-lg-6">
+      <?php echo $column_right ?>
+    </div>
+    <div class="col-sm-3 col-md-offset-1">
+      <div class="back_wrapper">
+        <a class="back" href="/projects">Back to Projects</a>
+      </div>
+    </div>
+  </div><!-- /.row -->
+
+  <?php endif; ?>
+
+
+</div><!-- /.container-fluid .single-projects -->

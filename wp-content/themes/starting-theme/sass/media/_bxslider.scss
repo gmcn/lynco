@@ -22,7 +22,11 @@ ul.bxslider {
   list-style: none;
 }
 .slide {
-  height: 100vh;
+  @include md {
+    height: 100vh;
+  }
+  height: 75vh;
+
 }
 .bx-viewport {
   /*fix other elements on the page moving (on Chrome)*/

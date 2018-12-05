@@ -13,7 +13,7 @@
 
     		?>
 
-    		<div class="col-md-6 wow fadeInUp" style="background: <?php echo $section_colour ?>">
+    		<div class="col-md-6 wrapper-<?php if ($i == 0 || $i == 1 || $i == 4 || $i == 5 || $i == 8 || $i == 9) : ?>even<?php else : ?>odd<?php endif; ?> wow fadeInUp" style="background: <?php echo $section_colour ?>; ">
 
           <h2><?php echo $section_title ?>
             <?php if ($section_link) : ?>
@@ -25,11 +25,12 @@
             <?php echo $section_title ?>
           </div>
 
-          <div class="wrapper-<?php if ($i == 0 || $i == 1 || $i == 4 || $i == 5 || $i == 8 || $i == 9) : ?>even<?php else : ?>odd<?php endif; ?>">
-            <div class="inner" style="background: url(<?php echo $section_image ?>) no-repeat bottom left;">
-            </div>
+          <div class="wrapper-image" style="background-image: url(<?php echo $section_image ?>)">
 
           </div>
+
+
+
 
     		</div>
 

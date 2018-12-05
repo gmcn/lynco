@@ -23,7 +23,9 @@ $post_date = get_the_date( 'j.m.Y' );
           </div>
           <div class="col-md-6 dates">
             Job Posted: <?php echo $post_date; ?><br />
-            Closing Date: <?php echo $closing_date; ?>
+            <?php if ($closing_date): ?>
+              Closing Date: <?php echo $closing_date; ?>
+            <?php endif; ?>
           </div>
         </div>
       </div>

@@ -25,9 +25,6 @@ $application_form = get_field('application_form');
       <?php endif; ?>
     </div><!-- /.col-md-4 -->
     <div class="col-md-8 col-md-offset-1">
-      <p>
-        Details:
-      </p>
       <?php echo do_shortcode('[contact-form-7 id="214" title="Career Application"]'); ?>
     </div><!-- /.col-md-8 -->
   </div><!-- /.row -->

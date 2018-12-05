@@ -6,7 +6,7 @@
     background-size: cover !important;
   }
   @include lg {
-    background-size: auto !important;
+    // background-size: auto !important;
   }
   .row::after {
     width: 10px;
@@ -35,11 +35,10 @@
     margin: 150px 0 100px 0;
     background-color: rgba(44,106,157,.85);
     padding: 50px;
-    font-size: 55px;
+    font-size: 40px;
     @include md {
       background-color: transparent;
       padding: 0;
-      font-size: 40px;
     }
     @include lg {
       background-color: transparent;
@@ -51,29 +50,24 @@
 }
 
 .copy {
+  border-top: 4px solid #fff;
   padding: 50px 0;
-  background: #123243;
-  overflow: hidden;
-}
-.copy .row::after {
-  width: 10px;
-  height: 100%;
-  transform: rotate(-25deg);
-  content: "";
-  position: absolute;
-  border-right: 1px solid #fff;
-  top: -100px;
-  right: -35%;
-  @include xs {
-    display: none;
+  background-color: #123243;
+  @include lg {
+    background-position: 150% 0%;
+    background-image: url('images/line.svg');
+    background-repeat: no-repeat;
   }
-  @include sm {
-    display: none;
-  }
-  @include md {
-    display: block;
-  }
+  // @include md {
+  //   background-image: url('images/line.svg');
+  //   background-repeat: no-repeat;
+  //   background-position: 0 0;
+  // }
+  // @include lg {
+  //   background-position: 250%;
+  // }
 
+  overflow: hidden;
 }
 
 .section1 {
@@ -181,15 +175,16 @@
 }
 
 .bottom-copy {
+  border-top: 4px solid #fff;
   padding: 50px 0;
   background: #0181C8;
   @include md {
-    background: url(images/about-history.jpg) #0181C8 right center no-repeat;
-    background-size: cover;
+    background: url(images/about-history@2x.jpg) #0181C8 right center no-repeat;
+    // background-size: cover;
   }
   @include lg {
-    background: url(images/about-history.jpg) #0181C8 center center no-repeat;
-    background-size: cover;
+    background: url(images/about-history@2x.jpg) #0181C8 center center no-repeat;
+    // background-size: cover;
   }
 }
 

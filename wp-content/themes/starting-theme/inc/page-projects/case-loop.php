@@ -1,12 +1,12 @@
-<div class="container-fluid projects">
+<?php $term_obj_list = get_the_terms( $post->ID, 'projects_category' ); ?>
+
+<div class="container-fluid projects case-studies">
   <div class="row">
     <div class="col-sm-1 hidden-xs projects__title_col wow fadeInLeft matchheight">
       <div class="vert-align">
-        <h2>Projects</h2>
+        <h2>Case Studies</h2>
       </div>
     </div>
-
-    <?php echo $terms_string; ?>
 
     <div class="col-sm-11 projects__loop matchheight">
       <?php while (have_posts()) : the_post(); ?>
@@ -24,7 +24,7 @@
             $project_timeframe = get_field('project_timeframe');
             $products_used = get_field('products_used');
 
-            $term_obj_list = get_the_terms( $post->ID, 'projects_category' );
+
             $terms_string = join(', ', wp_list_pluck($term_obj_list, 'name'));
 
             ?>

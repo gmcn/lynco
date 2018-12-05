@@ -44,6 +44,7 @@ include(locate_template("inc/page-news/filter.php"));
               <img src="<?php echo $thumb[0] ?>" alt="<?php the_title(); ?>">
             </div>
           </div>
+          <hr>
         </div>
 
     <?php endwhile;

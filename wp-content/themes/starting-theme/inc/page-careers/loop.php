@@ -38,33 +38,39 @@
                   </div>
                   <div class="col-md-6 dates">
                     Job Posted: <?php echo $post_date; ?><br />
-                    Closing Date: <?php echo $closing_date; ?>
+                    <?php if ($closing_date): ?>
+                      Closing Date: <?php echo $closing_date; ?>
+                    <?php endif; ?>
                   </div>
                 </div>
               </div>
 
 
+                <div class="col-md-3 matchheight career__intro hidden-xs hidden-sm">
+                  <?php echo $intro_main_copy ?>
+                  <ul>
+                    <?php if($application_form) : ?>
+                      <li><a href="<?php echo $application_form ?>" target="_blank">Dowload Application</a></li>
+                    <?php endif; ?>
+                    <li><a href="<?php the_permalink() ?>">Apply Now</a></li>
+                  </ul>
+                </div>
 
-              <div class="row">
+                <div class="col-md-7 career__copy matchheight col-md-offset-1">
+                  <?php echo $intro_sub_paragraph ?>
+                </div>
 
+                <div class="col-md-3 matchheight career__intro hidden-md hidden-lg">
+                  <?php echo $intro_main_copy ?>
+                  <ul>
+                    <?php if($application_form) : ?>
+                      <li><a href="<?php echo $application_form ?>" target="_blank">Dowload Application</a></li>
+                    <?php endif; ?>
+                    <li><a href="<?php the_permalink() ?>">Apply Now</a></li>
+                  </ul>
+                </div>
 
-                  <div class="col-md-3 matchheight career__intro">
-                    <?php echo $intro_main_copy ?>
-                    <ul>
-                      <?php if($application_form) : ?>
-                        <a href="<?php echo $application_form ?>" target="_blank"><li>Dowload Application</li></a>
-                      <?php endif; ?>
-                      <a href="<?php the_permalink() ?>"><li>Apply Now</li></a>
-                    </ul>
-                  </div>
-
-                  <div class="col-md-7 career__copy matchheight col-md-offset-1">
-                    <?php echo $intro_sub_paragraph ?>
-                  </div>
-
-                  <hr />
-
-              </div>
+                <hr />
 
             </div>
 

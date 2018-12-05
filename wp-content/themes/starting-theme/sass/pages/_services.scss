@@ -26,6 +26,10 @@
       height: 550px;
     }
     .wrapper-rotate {
+      -ms-transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
       transform: rotate(-45deg);
       overflow: hidden;
       top: 0;
@@ -41,7 +45,10 @@
           width: 200%;
         }
         .inner {
-          position: absolute;
+          -ms-transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
           transform: rotate(45deg);
           height: 100%;
           width: 100%;
@@ -52,23 +59,26 @@
       overflow: hidden;
     }
     .col-md-6:last-of-type {
-      padding: 50px;
+      @include md {
+        padding: 50px;
+      }
     }
     .wrapper {
       position: absolute;
       top: 50%;
-      width: 85%;
+      width: 100%;
       padding-right: 50px;
       @include md {
         width: 65%;
         padding-right: 100px;
+        border-right: 1px solid #fff;
       }
       -webkit-transform: translateY(-50%);
       -moz-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       -o-transform: translateY(-50%);
       transform: translateY(-50%);
-      border-right: 1px solid #fff;
+
     }
     p {
       font-size: 16px;
@@ -140,16 +150,20 @@
     margin-bottom: 30px;
   }
   .gallery {
-    padding-left: 40px;
-    padding-right: 40px;
+    margin-top: 25px;
     @include md {
       border-left: 1px solid #fff;
+      margin-top: 0;
+      padding-left: 40px;
+      padding-right: 40px;
     }
     .slide {
-      height: 800px;
+      @include md {
+        height: 800px;
+      }
     }
     .bx-wrapper .bx-controls-direction a {
-      top: 105%;
+      // top: 105%;
     }
   }
   .content {

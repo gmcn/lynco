@@ -16,9 +16,13 @@ get_header(); ?>
 
 <?php
 include(locate_template("inc/page-elements/title.php"));
-include(locate_template("inc/page-elements/intro.php"));
-include(locate_template("inc/page-careers/loop.php"));
+include(locate_template("inc/page-projects/filter.php"));
+include(locate_template("inc/page-projects/case-loop.php"));
 ?>
+
+
+
+
 
 <?php
 //get_sidebar();

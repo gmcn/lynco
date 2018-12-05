@@ -4,7 +4,10 @@
   .career {
     margin-bottom: 15px;
     .dates {
-      text-align: right;
+      @include md {
+        text-align: right;
+      }
+      text-align: left;
       color: rgba(255,255,255,.5);
       font-size: 14px;
       font-weight: $font__bold;
@@ -15,6 +18,9 @@
     }
     &__header {
       background: #5C214B;
+      @include md {
+        background: url(images/filter-line.png) #5C214B no-repeat 90% 50%;
+      }
       color: #fff;
       padding: 20px;
       margin-bottom: 15px;
@@ -39,10 +45,12 @@
       }
       ul {
         margin: 0;
-        position: absolute;
-        width: 100%;
-        bottom: 0;
+        @include md {
+          position: absolute;
+          bottom: 0;
+        }
         padding: 0;
+        width: 100%;
         list-style: none;
         li {
           float: left;
@@ -60,6 +68,9 @@
 }
 
 .apply {
+  @include md {
+    background: url(images/filter-line.png) #5C214B no-repeat 90% 50%;
+  }
   background: #5C214B;
   color: #fff;
   padding: 30px 0;

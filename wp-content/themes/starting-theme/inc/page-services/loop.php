@@ -1,5 +1,5 @@
 <div class="container-fluid services">
-  <div class="row no-gutter">
+  
 
       <?php
       $args = array(
@@ -62,5 +62,5 @@
 
       <?php $i++; endwhile; wp_reset_postdata(); ?>
 
-  </div><!-- /.row no-gutter -->
+
 </div><!-- /.container-fluid -->
