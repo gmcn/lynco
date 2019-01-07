@@ -9,40 +9,42 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<?php include(locate_template("inc/page-elements/title.php")); ?>
+
+<div class="container-fluid search__results">
+
+	<?php
+	if ( have_posts() ) : ?>
 
 		<?php
-		if ( have_posts() ) : ?>
+		/* Start the Loop */
+		while ( have_posts() ) : the_post();
 
-			<header class="page-header">
-				<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'starting-theme' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
-			</header><!-- .page-header -->
+		$content = get_the_content();
+		?>
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+			<div class="row">
+				<div class="col-md-12">
+					<h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
 
-				/**
-				 * Run the loop for the search to output the results.
-				 * If you want to overload this in a child theme then include a file
-				 * called content-search.php and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', 'search' );
+					<p><?php echo wp_trim_words( $content, 40, '...' ); ?></p>
+					<a class="more" href="<?php the_permalink(); ?>">Read More</a>
 
-			endwhile;
+				</div>
+			</div>
 
-			the_posts_navigation();
+		<?php endwhile;
 
-		else :
+		the_posts_navigation();
 
-			get_template_part( 'template-parts/content', 'none' );
+	else :
 
-		endif; ?>
+		get_template_part( 'template-parts/content', 'none' );
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+	endif; ?>
+
+	</div>
 
 <?php
-get_sidebar();
+//get_sidebar();
 get_footer();

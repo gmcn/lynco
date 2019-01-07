@@ -56,13 +56,17 @@
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
 				<div class="row in-nav">
-					<div class="col-md-3 col-md-offset-9 search">
+					<div class="col-md-4 col-lg-3 col-md-offset-8 col-lg-offset-9 search">
 						<form action="/" method="get">
 					    <input type="text" placeholder="Search" name="s" id="search" value="<?php the_search_query(); ?>" />
 					    <input type="image" class="img" alt="Search" src="<?php bloginfo( 'template_url' ); ?>/images/search-icon.png" />
 						</form>
-						<img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Follow Us On Facebook"  />
-						<img src="<?php echo get_template_directory_uri(); ?>/images/twitter.svg" alt="Follow Us On Twitter" />
+						<a class="social" href="https://www.linkedin.com/company/lynco/" target="_blank">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/linkedin.svg" alt="Follow Us On Linkedin"  />
+            </a>
+						<a class="social" href="https://www.instagram.com/lyncoltd/" target="_blank">
+              <img src="<?php echo get_template_directory_uri(); ?>/images/instagram.svg" alt="Follow Us On Instagram" />
+            </a>
 					</div>
 				</div>
 

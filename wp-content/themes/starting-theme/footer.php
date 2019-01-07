@@ -45,8 +45,12 @@
 
 						<div class="col-md-4 social">
 							<h4>Social Links</h4>
-							<img src="<?php echo get_template_directory_uri(); ?>/images/facebook.svg" alt="Follow Us On Facebook"  />
-							<img src="<?php echo get_template_directory_uri(); ?>/images/twitter.svg" alt="Follow Us On Twitter" />
+							<a class="social" href="https://www.linkedin.com/company/lynco/" target="_blank">
+	              <img src="<?php echo get_template_directory_uri(); ?>/images/linkedin.svg" alt="Follow Us On Linkedin"  />
+	            </a>
+							<a class="social" href="https://www.instagram.com/lyncoltd/" target="_blank">
+	              <img src="<?php echo get_template_directory_uri(); ?>/images/instagram.svg" alt="Follow Us On Instagram" />
+	            </a>
 						</div><!-- /.col-md-4 -->
 
 				</div>
@@ -104,7 +108,7 @@
 					© LYNCO LTD <?php echo date('Y'); ?>  |  <a href="cookie-policy">Cookie Policy</a>  |  <a href="privacy-policy">Privacy Policy</a>
 				</div>
 				<div class="col-md-4 footer__logo hidden-xs wow fadeInUp">
-					<a href="/"><img src="<?php echo get_template_directory_uri(); ?>/images/lynco-footer-logo.jpg" alt="<?php bloginfo( 'name' ); ?>"  /></a>
+					<a href="/"><img class="footer__branding" src="<?php echo get_template_directory_uri(); ?>/images/lynco-footer-logo.png" alt="<?php bloginfo( 'name' ); ?>"  /></a>
 					<a href="/contact"><img src="<?php echo get_template_directory_uri(); ?>/images/contact-icon.png" alt="<?php bloginfo( 'name' ); ?>"  /></a>
 				</div>
 				<div class="col-md-4 byline wow fadeInRight">

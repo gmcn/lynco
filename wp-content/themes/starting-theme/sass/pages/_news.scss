@@ -73,6 +73,32 @@
     width: 125px;
     color: #fff;
     text-transform: uppercase;
+    font-weight: 700;
+  }
+  .dropdown {
+    background: none;
+    -webkit-appearance:none;
+    background: url(images/select_arrows.png) 100% 50% no-repeat;
+    border: none;
+    width: 125px;
+    color: #fff;
+    font-weight: 700;
+    text-align: left;
+    .btn {
+      color: #fff;
+      font-weight: 700;
+      padding: 0;
+      margin: 0;
+      text-transform: uppercase;
+    }
+    .dropdown-menu {
+      border-radius: 0;
+      border: none;
+      a {
+        color: #B59B07;
+        font-weight: 700;
+      }
+    }
   }
 }
 

@@ -29,7 +29,10 @@ ul.nav li.menu-item-has-children:hover > ul.dropdown-menu {
 }
 
 header {
-  padding: 20px 35px;
+  @include md {
+    padding: 20px 35px;
+  }
+  padding: 20px 0;
   background-color: #123243;
 
 }
@@ -68,7 +71,10 @@ span.open {
 
 .overlay-content {
     position: relative;
-    top: 25%;
+      top: 20%;
+    @include lg {
+      top: 25%;
+    }
     width: 100%;
     text-align: center;
     margin-top: 30px;
@@ -77,17 +83,28 @@ span.open {
       list-style: none;
       margin: 0;
       padding: 0;
-      a:hover {
-        border-left: 15px solid #0182C8;
+      li {
+        transition: .5s;
+        a {
+          border-left: 50px solid transparent;
+          cursor: pointer;
+        }
+      }
+      li:hover {
+        border-left: 50px solid #0182C8;
+        a {
+          border-left: 0;
+        }
       }
     }
     ul ul {
+      display: none;
       @include md {
         position: absolute;
         top: 0;
         left: 33%;
         display: none;
-        transition: 0.5s;
+        // transition: 0.5s;
         height: 100%;
         width: 33%;
         border-right: 1px solid #0182C8;
@@ -104,12 +121,26 @@ span.open {
       display: block
     }
     ul li ul {
-      transition: 0.5s;
+      // transition: 0.5s;
     }
     ul li:hover ul {
       display: block;
     }
 }
+
+.overlay a.social {
+  padding: 0;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: $font__light;
+  color: #fff;
+  display: inline;
+  // transition: 0.3s;
+  text-transform: uppercase;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 
 .overlay a {
     @include md {
@@ -124,7 +155,7 @@ span.open {
     font-weight: $font__light;
     color: #fff;
     display: block;
-    transition: 0.3s;
+    // transition: 0.3s;
     text-transform: uppercase;
     padding-top: 0;
     padding-bottom: 0;
@@ -142,6 +173,7 @@ span.open {
     font-size: 100px;
     line-height: 40px;
     z-index: 99999;
+    transition: .5s;
 }
 
 .overlay .closebtn:hover {

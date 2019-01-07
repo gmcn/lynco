@@ -20,11 +20,7 @@ $parent_slug = $post_data->post_name;
         </div>
       </div>
 
-      <?php
-
-      echo the_content();
-
-       ?>
+      <?php echo the_content(); ?>
 
     </div>
     <div class="col-md-5 gallery">

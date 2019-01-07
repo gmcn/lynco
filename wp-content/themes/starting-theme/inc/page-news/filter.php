@@ -1,10 +1,15 @@
 <div class="newsfilter">
   <p>Filter by Year</p>
 
-  <select name="archive-menu" onChange="document.location.href=this.options[this.selectedIndex].value;">
-  <option value="">Select year</option>
-  <option value="/news/">All years</option>
-  <?php wp_get_archives('type=yearly&format=option'); ?>
-  </select>
+  <div class="dropdown show">
+    <a class="btn btn-secondary dropdown-toggle" href="https://example.com" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Select year
+    </a>
+
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <li><a class="dropdown-item" href="/news/">All Years</a></li>
+      <?php wp_get_archives('type=yearly&format=html'); ?>
+    </div>
+  </div>
 
 </div>

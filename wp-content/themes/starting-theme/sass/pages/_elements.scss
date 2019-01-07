@@ -65,3 +65,48 @@
     }
   }
 }
+
+.search__results {
+  .col-md-12 {
+    border-bottom: 1px solid #123243;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+  }
+  h1 {
+    color: #1D2C3C;
+    a {
+      color: #1D2C3C;
+      transition: .5s;
+      &:hover {
+        color: #1267ac;
+        text-decoration: none;
+
+      }
+    }
+    @include sm {
+      font-size: 25px;
+    }
+    @include md {
+      font-size: 35px;
+    }
+    @include lg {
+      font-size: 45px;
+    }
+    font-size: 45px;
+    color: #1D2C3C;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  .more {
+    padding: 10px 15px;
+    background: #1D2C3C;
+    display: inline-block;
+    color: #fff;
+    transition: .5s;
+    text-transform: uppercase;
+  }
+  .more:hover {
+    background: #34b5df;
+    text-decoration: none;
+  }
+}

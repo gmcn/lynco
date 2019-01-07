@@ -34,7 +34,8 @@ include(locate_template("inc/page-news/filter.php"));
           <div class="row">
             <div class="col-md-6 newscopy matchheight">
               <h2><?php the_title(); ?></h2>
-              <?php the_content(); ?>
+              <?php //the_content(); ?>
+              <p><?php $content = get_the_content(); echo substr($content, 0, 350); ?></p>
               <a href="<?php the_permalink(); ?>">View More</a>
               <div class="date">
                 <?php echo the_date(); ?>
