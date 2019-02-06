@@ -28,6 +28,11 @@ ul.nav li.menu-item-has-children:hover > ul.dropdown-menu {
   }
 }
 
+.search {
+  padding-right: 100px !important;
+  text-align: right;
+}
+
 header {
   @include md {
     padding: 20px 35px;

@@ -56,7 +56,7 @@
 			  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 
 				<div class="row in-nav">
-					<div class="col-md-4 col-lg-3 col-md-offset-8 col-lg-offset-9 search">
+					<div class="col-md-6 col-lg-5 col-md-offset-6 col-lg-offset-7 search">
 						<form action="/" method="get">
 					    <input type="text" placeholder="Search" name="s" id="search" value="<?php the_search_query(); ?>" />
 					    <input type="image" class="img" alt="Search" src="<?php bloginfo( 'template_url' ); ?>/images/search-icon.png" />
