@@ -26,7 +26,7 @@
 
 				<li class="slide" style="background:url(<?php echo $slide_image; ?>) center; background-size: cover">
 
-          <div style="width: 100%; height: 100%; background: rgba(0,0,0,.5);">
+          <div style="width: 100%; height: 100%; background: rgba(0,0,0,.2);">
 
             <div class="container-fluid" style="background: url('<?php echo $slide_slanted; ?>') center center no-repeat;">
 
