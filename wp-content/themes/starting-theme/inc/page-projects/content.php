@@ -108,7 +108,13 @@ $terms_string = join(', ', wp_list_pluck($term_obj_list, 'name'));
             		$slide_image = get_sub_field('slide_image');
             		$slide_title = get_sub_field('slide_title');
       					?>
-                <li class="slide" style="background:url(<?php echo $slide_image; ?>) center; background-size: cover"></li>
+
+
+                <a class="fancybox" rel="group" href="<?php echo $slide_image; ?>" title="<?php the_title(); ?>" style="height: 100%;">
+
+                  <li class="slide" style="background:url(<?php echo $slide_image; ?>) center; background-size: cover"></li>
+
+                </a>
 
       			<?php endwhile; ?>
 
