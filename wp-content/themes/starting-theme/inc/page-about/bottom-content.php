@@ -16,7 +16,7 @@ $section_3_right_video = get_field('section_3_right_video');
 
       <?php if($section_3_grid_layout == 'no') : ?>
 
-        <div class="col-md-3 col-md-offset-1 section3">
+        <div class="col-md-3 col-md-offset-1 section3 matchheight">
 
         <h3><?php echo $section_3_heading ?></h3>
 
@@ -24,22 +24,18 @@ $section_3_right_video = get_field('section_3_right_video');
 
         </div>
 
-        <div class="col-md-4 col-md-offset-3 section3">
+        <a href="https://www.youtube.com/embed/<?php echo $section_3_right_video ?>">
+          <div class="col-md-6 col-md-offset-2 section3 video matchheight">
 
-        <h3><?php echo $section_3_heading_right ?></h3>
+          <h3>WATCH</h3>
+          <h3>CORPORATE</h3>
+          <h3>VIDEO</h3>
 
-        <?php if($section_3_right_content) : ?>
-          <?php echo $section_3_right_content ?>
-        <?php endif; ?>
-
-        <?php if($section_3_right_video) : ?>
-
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/<?php echo $section_3_right_video ?>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <?php endif; ?>
-
-
-
-        </div>
+          <?php if($section_3_right_content) : ?>
+            <?php echo $section_3_right_content ?>
+          <?php endif; ?>
+          </div>
+        </a>
 
 
       <?php elseif($section_3_grid_layout == 'yes') : ?>

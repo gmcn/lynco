@@ -1217,7 +1217,8 @@ footer {
     font-weight: 400; }
 
 .section3 {
-  color: #fff; }
+  color: #fff;
+  padding: 50px 0; }
   .section3 h3 {
     padding: 15px 20px;
     background-color: #123243;
@@ -1232,10 +1233,27 @@ footer {
     font-size: 16px;
     font-weight: 400; }
 
+.video {
+  background: url(images/video_bg.jpg) center center no-repeat;
+  background-size: cover; }
+  .video h3 {
+    padding: 7.5px 15px;
+    background-color: #35B5DF;
+    text-transform: uppercase;
+    float: left;
+    margin-top: 0;
+    margin-bottom: 0; }
+
+.container-fluid.bottom-copy {
+  padding-left: 0;
+  padding-right: 0; }
+
 .bottom-copy {
   border-top: 4px solid #fff;
-  padding: 50px 0;
   background: #0181C8; }
+  .bottom-copy .row {
+    margin-left: 0;
+    margin-right: 0; }
   @media screen and (min-width: 992px) {
     .bottom-copy {
       background: url(images/about-history@2x.jpg) #0181C8 right center no-repeat; } }
