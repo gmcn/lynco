@@ -1235,14 +1235,16 @@ footer {
 
 .video {
   background: url(images/video_bg.jpg) center center no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  min-height: 400px !important; }
   .video h3 {
     padding: 7.5px 15px;
     background-color: #35B5DF;
     text-transform: uppercase;
     float: left;
     margin-top: 0;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    font-weight: 700; }
 
 .container-fluid.bottom-copy {
   padding-left: 0;

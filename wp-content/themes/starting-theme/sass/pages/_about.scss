@@ -178,6 +178,7 @@
 .video {
   background: url(images/video_bg.jpg) center center no-repeat;
   background-size: cover;
+  min-height: 400px !important;
   h3 {
     padding: 7.5px 15px;
     background-color: #35B5DF;
@@ -185,6 +186,7 @@
     float: left;
     margin-top: 0;
     margin-bottom: 0;
+    font-weight: 700;
   }
 }
 

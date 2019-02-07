@@ -24,7 +24,7 @@ $section_3_right_video = get_field('section_3_right_video');
 
         </div>
 
-        <a href="https://www.youtube.com/embed/<?php echo $section_3_right_video ?>">
+        <a class="various fancybox vert-align" data-fancybox-type="iframe" href="https://www.youtube.com/embed/<?php echo $section_3_right_video ?>?rel=0&showinfo=0">
           <div class="col-md-6 col-md-offset-2 section3 video matchheight">
 
           <h3>WATCH</h3>
