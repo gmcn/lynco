@@ -28,8 +28,8 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png">
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png">
-<link type="text/plain" rel="robots" href="<?php echo get_template_directory_uri(); ?>/robots.txt" />
-<link type="text/plain" rel="author" href="<?php echo get_template_directory_uri(); ?>/humans.txt" />
+<link type="text/plain" rel="robots" href="/robots.txt" />
+<link type="text/plain" rel="author" href="/humans.txt" />
 
 <?php wp_head(); ?>
 </head>
