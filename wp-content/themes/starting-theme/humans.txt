@@ -19,6 +19,7 @@
 
 /* SITE */
 
-  Last update: xx/xx/xx
+  Site Live: 21/02/19
+  Last update: N/A
   Doctype: HTML5
   IDE: Atom, FileZilla, Adobe XD, Wordpress, Bootstrap, SASS, matchheight.js, bxslider.js, fancybox.js
