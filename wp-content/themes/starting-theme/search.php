@@ -39,7 +39,7 @@ get_header(); ?>
 
 	else :
 
-		get_template_part( 'template-parts/content', 'none' );
+		include(locate_template("inc/page-elements/intro.php"));
 
 	endif; ?>
 

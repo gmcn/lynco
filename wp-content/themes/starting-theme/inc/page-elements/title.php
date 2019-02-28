@@ -5,6 +5,13 @@ $current = get_query_var('cat');
   <div class="row">
     <div class="col-md-6">
       <h1>
+        <?php
+
+          if ( is_404() ) {
+            echo "OOPS! That page can't be found";
+          }
+
+         ?>
         <?php if($post->post_parent == 168) : ?>
           Careers
         <?php elseif( is_page() ): ?>
