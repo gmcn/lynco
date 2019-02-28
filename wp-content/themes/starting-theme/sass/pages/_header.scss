@@ -28,10 +28,7 @@ ul.nav li.menu-item-has-children:hover > ul.dropdown-menu {
   }
 }
 
-.search {
-  padding-right: 100px !important;
-  text-align: right;
-}
+
 
 header {
   @include md {
@@ -39,7 +36,10 @@ header {
   }
   padding: 20px 0;
   background-color: #123243;
-
+  .search {
+    padding-right: 100px !important;
+    text-align: right;
+  }
 }
 
 img.branding {
