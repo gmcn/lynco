@@ -26,6 +26,21 @@
 
 } ) (jQuery);
 
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#1583c6"
+    },
+    "button": {
+      "background": "#143243"
+    }
+  },
+  "content": {
+    "href": "/privacy-policy"
+  }
+})});
+
 /* Open when someone clicks on the span element */
 function openNav() {
     document.getElementById("myNav").style.height = "100%";
